@@ -67,7 +67,7 @@ const Navbar = () => {
                   transition: { when: "beforeChildren", staggerChildren: 0.2 },
                 },
               }}
-              initial="closed"
+              initial="closed "
               animate="opened"
               className="absolute top-0 right-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-40"
             >
