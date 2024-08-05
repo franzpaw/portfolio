@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import { ThemeProvider } from 'next-themes'
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,10 +20,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} w-full  flex justify-center min-h-screen leading-relaxed tracking-wide pt-10`}>
-        <div className="lg:w-1/2 flex ">
+      <ThemeProvider 
+      attribute="class"
+      defaultTheme="system"
+    >
+        <div className="lg:w-2/3 flex ">
           <div><Navbar /></div>
           <div>{children}</div>
         </div>
+        </ThemeProvider>
       </body>
     </html>
   );

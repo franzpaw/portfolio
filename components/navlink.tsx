@@ -17,9 +17,9 @@ const Navlink: React.FC<NavlinkProps> = ({ link }) => {
   const pathName = usePathname();
 
   return (
-    <Link className={`rounded p-1 ${pathName === link.url ? "bg-black text-white" : ""}`} href={link.url}>
-      {link.title}
-    </Link>
+    <Link className={`px-5 py-1 rounded ${pathName === link.url ? "dark:bg-[#262626] bg-gray-100 bg-opacity-70 w-min text-black dark:text-white" : ""}`} href={link.url}>
+  {link.title}
+</Link>
   );
 };
 
